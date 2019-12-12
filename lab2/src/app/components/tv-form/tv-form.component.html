@@ -1,0 +1,34 @@
+<div class="form-group; container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+        <div>
+            <label>Brand: </label>
+            <input type="text" formControlName="brand">
+
+        </div>
+        <div>
+            <label>Contrast: </label>
+            <input type="text" formControlName="contrast">
+        </div>
+
+        <div>
+            <label>Format: </label>
+            <input type="text" formControlName="format">
+        </div>
+
+        <div>
+            <label>Image: </label>
+            <input type="file" formControlName="image">
+        </div>
+        <div>
+            <label>Resolution: </label>
+            <input type="number" formControlName="resolution">
+        </div>
+        <div>
+            <label>Type: </label>
+            <input type="string" formControlName="type">
+        </div>
+
+        <button [disabled]="!reactiveForm.valid" type="submit">Save</button>
+
+    </form>
+</div>
